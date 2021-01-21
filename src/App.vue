@@ -1,21 +1,26 @@
 <template>
-  <h1 v-text="text"></h1>
-  <!-- <h1 v-show="isShowing"></h1> -->
-  <!-- <h1 v-if="isShowing" v-html="title"></h1>
-  <h3 v-else-if="isShowing === null">This is v-else-if</h3>
-  <h2 v-else>This is v-else part</h2> -->
-  <p>Something else</p>
+  <h1>Dc Heroes</h1>
+  <ul>
+    <li v-for="(heroe, index) in dcHeroes" v-bind:key="index">{{index}} - {{heroe.name}}</li>
+  </ul>
 </template>
 
 <script>
 export default {
-  data(){
+  data() {
     return {
-      title: "<h1>Hey</h1>",
-      text: "Text",
-      isShowing: false,
-      count: 0,
+      dcHeroes: [
+        { name: 'SuperGirl' },
+        { name: 'Flash' },
+        { name: 'Batman' },
+        { name: 'Arrow' }
+      ]
     }
   }
+
 }
 </script>
+
+<style>
+
+</style>
