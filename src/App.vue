@@ -1,21 +1,15 @@
 <template>
   <AppHeader />
   <div class="flex w-full">
-    <!-- <DcHeroes /> -->
-    <Calendar />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import AppHeader from './components/AppHeader';
-// import DcHeroes from './components/DcHeroes';
-import Calendar from './components/Calendar';
+import AppHeader from './components/AppHeader'; 
 export default {
   components: {
     AppHeader,
-    // DcHeroes,
-    Calendar,
-
   },
 
 }
